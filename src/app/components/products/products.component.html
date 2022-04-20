@@ -1,0 +1,47 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a>
+                <img class="imgs" src="https://i.pinimg.com/564x/8c/22/60/8c2260b86df56d81f55abf189856cd49.jpg" alt="">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img class="imgs"
+                    src="https://cdn1.iconfinder.com/data/icons/business-finance-vol-2-33/512/24_Laptop_destop_mobile_phone_tab_pc-512.png"
+                    alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img class="imgs"
+                    src="https://scontent.fixc8-1.fna.fbcdn.net/v/t1.6435-9/117666899_3421152011280557_477692091545201373_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=0debeb&_nc_ohc=vfnGi57D8OAAX9Kp_Dd&_nc_ht=scontent.fixc8-1.fna&oh=00_AT_4lyH1tmrxUAJDf6UKxXNBEz7HE3Bj6oOyuuJk_XYEzw&oe=62838E16"
+                    alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img class="imgs"
+                    src="https://5.imimg.com/data5/HP/UH/MY-5936722/jewellery-display-necklace-stands-500x500.jpg"
+                    alt="">
+                <h6>Jewellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 class="itemData">{{item.title}}</h5>
+                <p class="itemData">{{item.description}}</p>
+                <p><strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
